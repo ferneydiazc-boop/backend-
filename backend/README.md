@@ -1,13 +1,10 @@
 # API Acordes del Barrio
 
-Consulta ../README.md, ../REVISION_DESARROLLO.md y ../DESPLIEGUE.md.
+API pública verificada: https://acordes-del-barrio-api.onrender.com/
+Health: GET /api/health → 200/status ok. Consulta ../DESPLIEGUE.md y ../REVISION_DESARROLLO.md para configuración, migración, pruebas y límites.
 
-Node >=22.13. npm ci; npm start. MongoDB mediante MONGODB_URI (MONGO_URI compatible) y DB_NAME. En producción se exige una URI explícita y no se generan datos demo. PORT lo proporciona Render; servidor escucha en 0.0.0.0.
+Node 24.14.0, Express 5 y MongoDB Atlas. Desarrollo: npm ci; .env privado desde .env.example; npm start. Producción usa MONGODB_URI secreta, DB_NAME, NODE_ENV=production, SEED_DEMO=false y PORT proporcionado por Render.
 
-Sesiones opacas de ocho horas en colección sesion, con hash SHA-256 del token e índice TTL. Contraseñas scrypt con sal; nunca se devuelven en las respuestas.
+Registro público fija estudiante. Login devuelve token opaco; peticiones privadas con Authorization: Bearer TOKEN. Encargado administra; estudiantes/instructores solo gestionan reservas propias. Logout y cambios de usuario revocan sesiones. Contraseñas scrypt; sesiones en MongoDB con tokens hasheados y TTL.
 
-Registro público solo estudiante. Listar/crear/modificar usuarios y modificar recursos requiere encargado. Estudiante e instructor solo gestionan reservas propias; encargado consulta y cancela reservas generales.
-
-GET /api/health prueba acceso a MongoDB y responde 503 si falla.
-
-Pruebas: npm test usa TEST_MONGODB_URI o localhost, base aleatoria independiente sin dropDatabase. Postman se regenera con npm run postman, exige cuentas demo y demoPassword local; ejecutar únicamente contra entorno de prueba autorizado.
+Pruebas: npm test usa TEST_MONGODB_URI independiente, base aleatoria y sin dropDatabase. CI pasó y la API pública pasó 16 verificaciones funcionales. Una sola instancia: bloqueo de solapes local al proceso. No guardar credenciales ni .env en Git.

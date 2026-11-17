@@ -1,0 +1,71 @@
+{
+  "url": "https://acordes-del-barrio-api.onrender.com",
+  "fecha": "2026-11-17T19:55:31.229Z",
+  "resultados": [
+    {
+      "prueba": "HTTPS y conexión MongoDB",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Login del administrador migrado",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Usuarios y recursos originales en Atlas",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Registro público 1 impone rol estudiante",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Registro público 2 impone rol estudiante",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Contraseña incorrecta y acceso admin rechazados",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Sin sesión y estudiante sin permisos administrativos",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Administrador crea recurso de prueba",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Reservas simultáneas: una creada y otra en conflicto",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Disponibilidad y reservas propias",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Otro estudiante no consulta ni cancela reservas ajenas",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Cancelación propia y liberación de horario",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Desactivación lógica del recurso de prueba",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Desactivar cuenta de prueba revoca su sesión",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Logout invalida el token",
+      "resultado": "PASS"
+    },
+    {
+      "prueba": "Finalización sin alterar cuentas originales",
+      "resultado": "PASS"
+    }
+  ],
+  "nota": "Se conservaron los datos originales. Dos cuentas de prueba desactivadas, un recurso de prueba inactivo y reservas de prueba canceladas."
+}

@@ -1,0 +1,15 @@
+{
+  "roles": [
+    {
+      "role": "readWrite",
+      "db": "acordes_del_barrio"
+    }
+  ],
+  "indiceAplicacionAccesible": true,
+  "otraBaseBloqueada": true,
+  "usuarios": 6,
+  "usuariosActivos": 4,
+  "recursos": 7,
+  "reservas": 3,
+  "fecha": "2026-11-17T20:03:15.530Z"
+}

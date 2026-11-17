@@ -1,0 +1,27 @@
+{
+  "database": "acordes_del_barrio",
+  "results": {
+    "usuario": {
+      "origen": 4,
+      "destino": 4,
+      "contenidoIgual": true
+    },
+    "recurso": {
+      "origen": 6,
+      "destino": 6,
+      "contenidoIgual": true
+    },
+    "reserva": {
+      "origen": 1,
+      "destino": 1,
+      "contenidoIgual": true
+    },
+    "counters": {
+      "origen": 3,
+      "destino": 3,
+      "contenidoIgual": true
+    }
+  },
+  "originalesConservados": true,
+  "verificadoEn": "2026-11-17T19:53:48.573Z"
+}
