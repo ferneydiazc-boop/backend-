@@ -1,0 +1,13 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+**/node_modules/
+**/.gradle/
+**/.idea/
+**/build/
+**/local.properties
+*.jks
+*.keystore
+*.log
+.DS_Store

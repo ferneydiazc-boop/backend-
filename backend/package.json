@@ -1,0 +1,20 @@
+{
+  "name": "acordes-del-barrio-api",
+  "version": "1.0.0",
+  "description": "API REST para reservar salas e instrumentos - Escuela de música Acordes del Barrio",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "test": "node --env-file-if-exists=.env --test test/api.test.js",
+    "postman": "node postman/generar.js",
+    "reset-admin": "node --env-file=.env restablecer-admin.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.9.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

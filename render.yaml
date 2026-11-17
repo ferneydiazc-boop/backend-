@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: acordes-del-barrio-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: off
+    numInstances: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 24.14.0
+      - key: MONGODB_URI
+        sync: false
+      - key: DB_NAME
+        value: acordes_del_barrio
+      - key: SEED_DEMO
+        value: "false"
