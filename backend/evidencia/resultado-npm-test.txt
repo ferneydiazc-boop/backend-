@@ -1,0 +1,94 @@
+
+> acordes-del-barrio-api@1.0.0 test
+> node --test test/api.test.js
+
+TAP version 13
+# (node:232) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: sin X-User-Id -> 401
+ok 1 - sin X-User-Id -> 401
+  ---
+  duration_ms: 65.099782
+  type: 'test'
+  ...
+# Subtest: listar recursos (sin inactivos) y filtrar por tipo
+ok 2 - listar recursos (sin inactivos) y filtrar por tipo
+  ---
+  duration_ms: 14.304945
+  type: 'test'
+  ...
+# Subtest: detalle de recurso 200 / 404
+ok 3 - detalle de recurso 200 / 404
+  ---
+  duration_ms: 11.047454
+  type: 'test'
+  ...
+# Subtest: CRUD de recursos: solo encargado
+ok 4 - CRUD de recursos: solo encargado
+  ---
+  duration_ms: 63.338926
+  type: 'test'
+  ...
+# Subtest: crear reserva válida -> 201
+ok 5 - crear reserva válida -> 201
+  ---
+  duration_ms: 8.911304
+  type: 'test'
+  ...
+# Subtest: REGLA PRINCIPAL: solape -> 409
+ok 6 - REGLA PRINCIPAL: solape -> 409
+  ---
+  duration_ms: 34.481855
+  type: 'test'
+  ...
+# Subtest: franjas contiguas, otra fecha u otro recurso NO son conflicto
+ok 7 - franjas contiguas, otra fecha u otro recurso NO son conflicto
+  ---
+  duration_ms: 24.487169
+  type: 'test'
+  ...
+# Subtest: REGLA SECUNDARIA: recurso en mantenimiento/inactivo -> 400
+ok 8 - REGLA SECUNDARIA: recurso en mantenimiento/inactivo -> 400
+  ---
+  duration_ms: 2.996634
+  type: 'test'
+  ...
+# Subtest: validaciones -> 400 / 404
+ok 9 - validaciones -> 400 / 404
+  ---
+  duration_ms: 18.097505
+  type: 'test'
+  ...
+# Subtest: consultar reservas por recurso+fecha y por usuario
+ok 10 - consultar reservas por recurso+fecha y por usuario
+  ---
+  duration_ms: 16.870254
+  type: 'test'
+  ...
+# Subtest: disponibilidad del recurso
+ok 11 - disponibilidad del recurso
+  ---
+  duration_ms: 3.984856
+  type: 'test'
+  ...
+# Subtest: editar reserva: ok, solape 409, ajena 403
+ok 12 - editar reserva: ok, solape 409, ajena 403
+  ---
+  duration_ms: 17.537295
+  type: 'test'
+  ...
+# Subtest: cancelar: ajena 403, propia 200, doble 400, libera franja
+ok 13 - cancelar: ajena 403, propia 200, doble 400, libera franja
+  ---
+  duration_ms: 21.421518
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 445.072328
